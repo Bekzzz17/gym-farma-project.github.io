@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTECH | Сенің күшің — бізбен</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            background-image: url('https://images.unsplash.com/photo-1571019613914-85f342c1d4b2?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 60px;
+            color: red;
+            text-shadow: 2px 2px black;
+        }
+
+        header p {
+            font-size: 22px;
+            color: #ccc;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 15px 0;
+            z-index: 100;
+            border-bottom: 2px solid red;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        .section {
+            display: none;
+            padding: 60px 20px;
+        }
+
+        .active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .product div {
+            background-color: #1c1c1c;
+            border-left: 5px solid red;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .promo, .fort-box, .contact-form {
+            background-color: #1c1c1c;
+            border-left: 5px solid red;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+        }
+
+        .promo h3, .fort-box h3 {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .promo p, .fort-box p {
+            color: #ccc;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Мәзір -->
+<nav>
+    <a onclick="showSection('home')">Басты бет</a>
+    <a onclick="showSection('promo')">Акциялар</a>
+    <a onclick="showSection('fort')">Сіздің форт</a>
+    <a onclick="showSection('contact')">Байланыс</a>
+</nav>
+
+<!-- Басты бет -->
+<header id="home" class="section active">
+    <h1>Beka's and Era Sportpit </h1>
+    <t>Бұл — жай ғана өнім емес. Бұл — күш, тәртіп, және сенің мықтылығың. Бізбен бірге шекарасыз бол!</p>
+
+    <!-- Тауарлар -->
+    <div class="product">
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.T_VUhH4_sloIOkzDVuPpmAHaHa?rs=1&pid=ImgDetMain" alt="Протеин">
+            <h3>Протеин</h3>
+            <p>25,000 ₸</p>
+        </div>
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.NlwYBqqscrCrBl5rkLhP0AHaHa?rs=1&pid=ImgDetMain" alt="Креатин">
+            <h3>Креатин</h3>
+            <p>8,500 ₸</p>
+        </div>
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.gjK3EKw8_xUgsob7TyrzLgHaHz?rs=1&pid=ImgDetMain" alt="Гейнер">
+            <h3>Гейнер</h3>
+            <p>22,000 ₸</p>
+        </div>
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.eaUfc6wJNaFW4-qGTOVKFwHaHa?rs=1&pid=ImgDetMain" alt="BCAA">
+            <h3>BCAA</h3>
+            <p>9,000 ₸</p>
+        </div>
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.2MDQT15nyKe5gITfs4ui9gHaHa?rs=1&pid=ImgDetMain" alt="Тренболон">
+            <h3>Тренболон</h3>
+            <p>18,000 ₸</p>
+        </div>
+    </div>
+</header>
+
+<!-- Акциялар -->
+<div id="promo" class="section">
+    <h2 style="text-align:center;">Жеңілдіктер — тек нағыз аюлар үшін</h2>
+
+    <div class="promo">
+        <h3>Whey Protein - 20% жеңілдік</h3>
+        <p>Бұрынғы баға: <s>25,000 ₸</s> | Қазір: <strong>20,000 ₸</strong></p>
+    </div>
+
+    <div class="promo">
+        <h3>Creatine Monohydrate - 2+1</h3>
+        <p>Екеуін алсаң, үшіншісі тегін! 8,500 ₸-ге екі дана.</p>
+    </div>
+
+    <div class="promo">
+        <h3>Mass Gainer - 15% жеңілдік</h3>
+        <p>Жаңа клиенттерге баға: <strong>18,700 ₸</strong></p>
+    </div>
+</div>
+
+<!-- Сіздің форт -->
+<div id="fort" class="section">
+    <h2 style="text-align:center;">СЕНІҢ ФОРТ — Мотивация алаңы</h2>
+
+    <div class="fort-box">
+        <h3>Күш — тәртіптен басталады</h3>
+        <p>Өнімдерің, прогрессің және мақсаттарың осында болады. Жақында іске қосылады!</p>
+    </div>
+
+    <div class="fort-box">
+        <h3>Жетістік = Протеин + Ерік + Жаттығу</h3>
+        <p>Сенің форт — сенің базаң.</p>
+    </div>
+    <div class="fort-box">
+        <h3>Осымен тренка ұрсай бауырым</h3>
+        <a href="https://youtu.be/Qti7LmdQDao?si=sOsNcKV-FpL4ssCf" target="_blank">Осы ссылкаға өт родной</a>
+    </div>
+</div>
+
+<!-- Байланыс -->
+<div id="contact" class="section">
+    <h2 style="text-align:center;">Бізбен байланыс</h2>
+
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Атың" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Хабарлама..." rows="4" required></textarea>
+            <button type="submit">Жіберу</button>
+        </form>
+    </div>
+</div>
+
+<!-- JS: Бөлімдер арасында ауыстыру -->
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
